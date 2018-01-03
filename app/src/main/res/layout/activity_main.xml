@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0f8076"
+    tools:context="com.example.abhinavraj.votes.MainActivity">
+
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_alignStart="@+id/button2"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/rounded_corner"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="CAPTAIN AMERICA"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/button1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp"
+        android:background="@drawable/rounded_corner"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="IRON MAN"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/rounded_corner"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="THOR"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/button3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/rounded_corner"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="HULK"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button6"
+        android:layout_alignBottom="@+id/button6"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="11dp"
+        android:fontFamily="serif"
+        android:text="VIEW VOTES" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="38dp"
+        android:layout_marginStart="21dp"
+        android:fontFamily="serif"
+        android:text="CLEAR VOTES" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:fontFamily="serif"
+        android:text="VOTE FOR YOUR FAVORITE SUPERHERO"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+</android.widget.RelativeLayout>
