@@ -5,10 +5,10 @@ the votes would be stored in an sqlite datasheet, currently only the person the 
 the project's final aim stands to having an online server whereas a person can start a vote over a perticular question posted and 
 the general overview of public can be noted using this app.
 
-# Installation 
+## Installation 
 Enter the command git clone https://github.com/abhinavraj23/Votes.git in your terminal to clone the project in your pc. The current password 
 of voting is "RENDER" but the system has to be changed, a master server has to be created where as any person can vote only once and
 a single person gets the voting data after which he publishes them.
 
-# Contact
+## Contact
 In case of any query please write me on abhinav.23.april@gmail.com.
