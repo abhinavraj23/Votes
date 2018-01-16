@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     boolean r1,r2,r3,r4;
     DatabaseHelper myDb;
     public static String globalPreferenceName="Votes";
+    private int counter = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,58 +57,88 @@ public class MainActivity extends AppCompatActivity {
             }
 
         }
-            comp1.setOnClickListener(new View.OnClickListener() {
 
-                @Override
-                public void onClick(View v) {
+        comp1.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if(counter == 0) {
                     a1++;
                     SharedPreferences settings1 = getSharedPreferences(globalPreferenceName,MODE_PRIVATE);
-                      saveMyData("votes1",a1,settings1);
-                      updateData("1",a1);
+                    saveMyData("votes1",a1,settings1);
+                    updateData("1",a1);
+                    counter++;
+                }
+                else
+                {
+                    Toast.makeText(MainActivity.this,"Only one vote per user",Toast.LENGTH_SHORT).show();
+                }
+            }
 
-                    }
 
+        });
+        comp2.setOnClickListener(new View.OnClickListener() {
 
-            });
-            comp2.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View v) {
+            @Override
+            public void onClick(View v) {
+                if(counter == 0)
+                {
                     a2++;
                     SharedPreferences settings2 = getSharedPreferences(globalPreferenceName,MODE_PRIVATE);
-                     saveMyData("votes2",a2,settings2);
-                     updateData("2",a2);
+                    saveMyData("votes2",a2,settings2);
+                    updateData("2",a2);
+                    counter++;
+                }
+                else
+                {
+                    Toast.makeText(MainActivity.this,"Only one vote per user",Toast.LENGTH_SHORT).show();
+                }
+            }
 
-                    }
 
+        });
+        comp3.setOnClickListener(new View.OnClickListener() {
 
-            });
-            comp3.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View v) {
+            @Override
+            public void onClick(View v) {
+                if(counter == 0)
+                {
                     a3++;
                     SharedPreferences settings3 = getSharedPreferences(globalPreferenceName,MODE_PRIVATE);
                     saveMyData("votes3",a3,settings3);
                     updateData("3",a3);
+                    counter++;
+                }
+                else
+                {
+                    Toast.makeText(MainActivity.this,"Only one vote per user",Toast.LENGTH_SHORT).show();
+                }
+            }
 
-                    }
+        });
+        comp4.setOnClickListener(new View.OnClickListener() {
 
-            });
-            comp4.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View v) {
+            @Override
+            public void onClick(View v) {
+                if(counter == 0)
+                {
                     a4++;
                     SharedPreferences settings4 = getSharedPreferences(globalPreferenceName,MODE_PRIVATE);
                     saveMyData("votes4",a4,settings4);
                     updateData("4",a4);
+                    counter++;
+                }
+                else
+                {
+                    Toast.makeText(MainActivity.this,"Only one vote per user",Toast.LENGTH_SHORT).show();
+                }
 
-                    }
+            }
 
 
-            });
-            result.setOnClickListener(
+        });
+
+        result.setOnClickListener(
                     new View.OnClickListener() {
 
                         @Override
@@ -172,9 +203,9 @@ public class MainActivity extends AppCompatActivity {
 
         boolean isUpdate = myDb.updateData(s,String.valueOf(votes));
         if (isUpdate == true)
-            Toast.makeText(MainActivity.this, "Voting successful", Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this, "Voting successful", Toast.LENGTH_SHORT).show();
         else
-            Toast.makeText(MainActivity.this, "Voting unsuccessful", Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this, "Voting unsuccessful", Toast.LENGTH_SHORT).show();
 
     }
     public void VupdateData(String s,int votes){
