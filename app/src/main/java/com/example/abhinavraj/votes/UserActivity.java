@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class UserActivity extends AppCompatActivity {
@@ -16,11 +17,13 @@ public class UserActivity extends AppCompatActivity {
     DatabaseHelper myDb;
     public static String globalPreferenceName="Votes";
     private int counter = 0;
-
+    TextView txt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
+        txt = (TextView) findViewById(R.id.greeting);
+        txt.setText("");
         myDb = new DatabaseHelper(this);
         comp1 = (Button) findViewById(R.id.button1);
         comp2 = (Button) findViewById(R.id.button2);
@@ -55,6 +58,8 @@ public class UserActivity extends AppCompatActivity {
 
         }
 
+
+
             comp1.setOnClickListener(new View.OnClickListener() {
 
                 @Override
@@ -64,6 +69,7 @@ public class UserActivity extends AppCompatActivity {
                         SharedPreferences settings1 = getSharedPreferences(globalPreferenceName,MODE_PRIVATE);
                         saveMyData("votes1",a1,settings1);
                         updateData("1",a1);
+                        txt.setText("Thank You for support");
                         counter++;
                     }
                     else
@@ -84,6 +90,7 @@ public class UserActivity extends AppCompatActivity {
                         SharedPreferences settings2 = getSharedPreferences(globalPreferenceName,MODE_PRIVATE);
                         saveMyData("votes2",a2,settings2);
                         updateData("2",a2);
+                        txt.setText("Thank You for support");
                         counter++;
                     }
                     else
@@ -104,6 +111,7 @@ public class UserActivity extends AppCompatActivity {
                         SharedPreferences settings3 = getSharedPreferences(globalPreferenceName,MODE_PRIVATE);
                         saveMyData("votes3",a3,settings3);
                         updateData("3",a3);
+                        txt.setText("Thank You for support");
                         counter++;
                     }
                    else
@@ -123,6 +131,7 @@ public class UserActivity extends AppCompatActivity {
                         SharedPreferences settings4 = getSharedPreferences(globalPreferenceName,MODE_PRIVATE);
                         saveMyData("votes4",a4,settings4);
                         updateData("4",a4);
+                        txt.setText("Thank You for support");
                         counter++;
                     }
                     else
